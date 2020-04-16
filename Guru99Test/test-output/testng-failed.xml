@@ -6,8 +6,9 @@
       <class name="test.SanityTest">
         <methods>
           <include name="beforeTest"/>
+          <include name="login"/>
+          <include name="test_MainPage_Check"/>
           <include name="afterTest"/>
-          <include name="gotoInsurancePage"/>
         </methods>
       </class> <!-- test.SanityTest -->
     </classes>
