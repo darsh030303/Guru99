@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16826" started-at="2020-04-14T15:28:22Z" finished-at="2020-04-14T15:28:39Z">
+  <suite name="Default suite" duration-ms="15161" started-at="2020-04-16T07:19:20Z" finished-at="2020-04-16T07:19:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16826" started-at="2020-04-14T15:28:22Z" finished-at="2020-04-14T15:28:39Z">
+    <test name="Default test" duration-ms="15161" started-at="2020-04-16T07:19:20Z" finished-at="2020-04-16T07:19:36Z">
       <class name="test.SanityTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.SanityTest@e2cbe0]" name="beforeTest" is-config="true" duration-ms="11045" started-at="2020-04-14T20:58:22Z" finished-at="2020-04-14T20:58:33Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.SanityTest@feb3fa]" name="beforeTest" is-config="true" duration-ms="9084" started-at="2020-04-16T12:49:20Z" finished-at="2020-04-16T12:49:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="test_MainPage_Check()[pri:0, instance:test.SanityTest@e2cbe0]" name="test_MainPage_Check" duration-ms="200" started-at="2020-04-14T20:58:33Z" finished-at="2020-04-14T20:58:33Z">
+        <test-method status="PASS" signature="test_MainPage_Check()[pri:0, instance:test.SanityTest@feb3fa]" name="test_MainPage_Check" duration-ms="105" started-at="2020-04-16T12:49:30Z" finished-at="2020-04-16T12:49:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_MainPage_Check -->
-        <test-method status="PASS" signature="login()[pri:0, instance:test.SanityTest@e2cbe0]" name="login" duration-ms="5484" started-at="2020-04-14T20:58:33Z" finished-at="2020-04-14T20:58:39Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:test.SanityTest@feb3fa]" name="login" duration-ms="2687" started-at="2020-04-16T12:49:30Z" finished-at="2020-04-16T12:49:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="AfterLogin()[pri:0, instance:test.SanityTest@e2cbe0]" name="AfterLogin" duration-ms="43" started-at="2020-04-14T20:58:39Z" finished-at="2020-04-14T20:58:39Z">
+        <test-method status="PASS" signature="VerifyLogin()[pri:0, instance:test.SanityTest@feb3fa]" name="VerifyLogin" duration-ms="28" started-at="2020-04-16T12:49:32Z" finished-at="2020-04-16T12:49:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterLogin -->
+        </test-method> <!-- VerifyLogin -->
+        <test-method status="PASS" signature="gotoInsurancePage()[pri:0, instance:test.SanityTest@feb3fa]" name="gotoInsurancePage" duration-ms="3006" started-at="2020-04-16T12:49:32Z" finished-at="2020-04-16T12:49:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoInsurancePage -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.SanityTest@feb3fa]" name="afterTest" is-config="true" duration-ms="223" started-at="2020-04-16T12:49:35Z" finished-at="2020-04-16T12:49:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- test.SanityTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

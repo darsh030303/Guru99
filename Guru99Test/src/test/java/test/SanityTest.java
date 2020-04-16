@@ -3,6 +3,7 @@ package test;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
+import pages.InsurancePage;
 import pages.LoginPage;
 
 import org.testng.annotations.BeforeTest;
@@ -20,6 +21,7 @@ public class SanityTest {
 	
 	LoginPage objLogin;
     HomePage objHomePage; //first comment for first commit    sss
+    InsurancePage objInsurance;
  
   @BeforeTest
   public void beforeTest()
@@ -39,9 +41,7 @@ public class SanityTest {
 	  //Verify login page title
 	    String loginPageTitle = objLogin.getLoginTitle();
 	    Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
-	    
-		    
-	
+
   }
   
   @Test(priority=1)
@@ -52,7 +52,7 @@ public class SanityTest {
   }
   
   @Test(priority=2)
-  public void afterLogin()
+  public void VerifyLogin()
   {
 	  // go the next page
 	    objHomePage = new HomePage(driver);
@@ -65,6 +65,18 @@ public class SanityTest {
 	    System.out.println("Homepage test pass");
   }
 
+  @Test(priority=3)
+  public void gotoInsurancePage()
+  {
+	  objInsurance = new InsurancePage(driver);
+	  objInsurance.clickInsuracePageLink();
+	  
+	  //Verify insurance page 
+	  System.out.println(objInsurance.getInsurancePagetitle());
+	  String InsurancePageTitle = objInsurance.getInsurancePagetitle();
+	  Assert.assertTrue(InsurancePageTitle.contains("Insurance Broker System - Login"));
+  }
+  
   @AfterTest
   public void afterTest()
   {
