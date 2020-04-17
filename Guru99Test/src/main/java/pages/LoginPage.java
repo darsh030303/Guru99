@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,8 +39,18 @@ WebDriver driver;
   //Set user name in textbox
     public void setUserName(String strUserName)
     {
-
-        user99GuruName.sendKeys(strUserName);
+        try
+    	{
+        	user99GuruName.sendKeys(strUserName);
+        }
+    	catch(NoSuchElementException e)
+    	{
+    		System.out.println(e);
+    	}
+    	catch(Exception e)
+    	{
+    		System.out.println(e);
+    	}
 
     }
 
@@ -47,7 +58,18 @@ WebDriver driver;
     public void setPassword(String strPassword)
     {
 
-    	password99Guru.sendKeys(strPassword);
+       	try
+    	{
+    		password99Guru.sendKeys(strPassword);
+        }
+    	catch(NoSuchElementException e)
+    	{
+    		System.out.println(e);
+    	}
+    	catch(Exception e)
+    	{
+    		System.out.println(e);
+    	}
 
     }
     
@@ -55,7 +77,18 @@ WebDriver driver;
     public void clickLogin()
     {
 
-    	login.click();
+      	try
+    	{
+    		login.click();
+        }
+    	catch(NoSuchElementException e)
+    	{
+    		System.out.println(e);
+    	}
+    	catch(Exception e)
+    	{
+    		System.out.println(e);
+    	}
 
     }
     
@@ -63,7 +96,20 @@ WebDriver driver;
     public String getLoginTitle()
     {
 
-     return    titleText.getText();
+    	try
+    	{
+    		return    titleText.getText();
+        }
+    	catch(NoSuchElementException e)
+    	{
+    		System.out.println(e);
+    	}
+    	catch(Exception e)
+    	{
+    		System.out.println(e);
+    	}
+		return null;
+     
 
     }
     

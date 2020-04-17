@@ -37,11 +37,13 @@ public class SanityTest {
 		driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");	
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
 		
   }
 
   @Test(priority=0)
-  public void test1_HomePage() throws IOException
+  public void test1_HomePage()
   {
 	  //Create Login Page object
 	  objLogin = new LoginPage(driver);
@@ -54,12 +56,12 @@ public class SanityTest {
   }
   
   @Test(priority=1)
-  public void test2_login() throws Exception
+  public void test2_login() 
   {
 	//login to application
 		String user,pwd; int row=0,col=0;
 	//	Excel1.setExcelFile(con1.Excelfilepath+con1.Excelfilename, con1.Excelsheetname);
-		System.out.print("helo");
+	//	System.out.print("helo");
 	//	user=Excel1.getCellData(row, col);
 		row=0;col=1;
 	//	pwd=Excel1.getCellData(row, col);
@@ -70,13 +72,24 @@ public class SanityTest {
   }
   
   @Test(priority=2)
-  public void test3_VerifyLogin() throws IOException
+  public void test3_VerifyLogin()
   {
 	  // go the next page
 	    objHomePage = new HomePage(driver);
-	    
+	    System.out.println(objHomePage.getHomePagetitle());
 	    Assert.assertTrue(objHomePage.getHomePagetitle().contains("Guru99 Bank Manager HomePage"));
-	    Takescreenshot.takeScreenShot1(driver);
+	    try
+	    {
+	    	Takescreenshot.takeScreenShot1(driver);
+	    }
+	    catch(IOException e)
+	    {
+	    	System.out.print(e);
+	    }
+	    catch(Exception e)
+	    {
+	    	System.out.print(e);
+	    }
   }
 
   @Test(priority=3 )
@@ -88,8 +101,20 @@ public class SanityTest {
 	  //Verify insurance page 
 	  System.out.println(objInsurance.getInsurancePagetitle());
 	  String InsurancePageTitle = objInsurance.getInsurancePagetitle();
+	 // System.out.println(InsurancePageTitle);
 	  Assert.assertTrue(InsurancePageTitle.contains("Insurance Broker System - Login"));
-	  Takescreenshot.takeScreenShot1(driver);
+	  try
+	    {
+	    	Takescreenshot.takeScreenShot1(driver);
+	    }
+	    catch(IOException e)
+	    {
+	    	System.out.print(e);
+	    }
+	    catch(Exception e)
+	    {
+	    	System.out.print(e);
+	    }
   }
   
   @AfterTest

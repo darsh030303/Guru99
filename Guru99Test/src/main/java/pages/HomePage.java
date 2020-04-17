@@ -1,17 +1,17 @@
 package pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
 	WebDriver driver;
-
+	//WebDriverWait wait = new WebDriverWait(driver, 10);
 	   
-  //  @FindBy(xpath="//table//tr[@class='heading3']")  WebElement homePageUserName;
-
     public HomePage(WebDriver driver)
     {
         this.driver = driver;
@@ -21,6 +21,19 @@ public class HomePage {
     //Get the User name from Home Page
     public String getHomePagetitle()
     {
-         return     driver.getTitle();
+    	
+    	try
+    	{
+    		return     driver.getTitle();
+    	}
+    	catch(NoSuchElementException e)
+    	{
+    		System.out.println(e);
+    	}
+    	catch(Exception e)
+    	{
+    		System.out.println(e);
+    	}
+		return null;
     }
 }

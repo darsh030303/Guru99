@@ -15,6 +15,7 @@ public class Takescreenshot {
 
 	public static void takeScreenShot1(WebDriver driver) throws IOException
 	{
+		
 		File file1=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
 		// Create object of SimpleDateFormat class and decide the format
