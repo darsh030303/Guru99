@@ -9,6 +9,7 @@ import uti.Excel1;
 import uti.Takescreenshot;
 import uti.con1;
 
+
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
@@ -52,21 +53,22 @@ public class SanityTest {
 	    String loginPageTitle = objLogin.getLoginTitle();
 	    Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
 		System.out.print(loginPageTitle);
-		//Excel1.closefile();
+		
   }
   
   @Test(priority=1)
-  public void test2_login() 
+  public void test2_login() throws Exception 
   {
 	//login to application
 		String user,pwd; int row=0,col=0;
-	//	Excel1.setExcelFile(con1.Excelfilepath+con1.Excelfilename, con1.Excelsheetname);
-	//	System.out.print("helo");
-	//	user=Excel1.getCellData(row, col);
+		
+		Excel1.setExcelFile(con1.Excelfilepath+con1.Excelfilename, con1.Excelsheetname);
+	
+		user=Excel1.getCellData(row, col);
 		row=0;col=1;
-	//	pwd=Excel1.getCellData(row, col);
-	//	System.out.print(user+" "+pwd);
-	//	objLogin.loginToGuru99(user,pwd);
+		pwd=Excel1.getCellData(row, col);
+		System.out.print(user+" "+pwd);
+		objLogin.loginToGuru99(user,pwd);
 		
 	    objLogin.loginToGuru99("mngr252548", "buvEnat");
   }
@@ -120,7 +122,7 @@ public class SanityTest {
   @AfterTest
   public void afterTest() throws IOException
   {
-	 // Excel1.closefile();
+	  Excel1.closefile();
 	  driver.close();
   }
 }
