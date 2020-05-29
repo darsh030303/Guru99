@@ -34,7 +34,7 @@ public class SanityTest {
   @BeforeTest
   public void beforeTest()
   {
-	      System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32_n\\chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://demo.guru99.com/V4/");	
