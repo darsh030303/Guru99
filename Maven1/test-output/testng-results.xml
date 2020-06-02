@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21581" started-at="2020-06-02T15:03:24Z" finished-at="2020-06-02T15:03:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21581" started-at="2020-06-02T15:03:24Z" finished-at="2020-06-02T15:03:45Z">
+      <class name="testSuite.SanityTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testSuite.SanityTest@1774679]" name="beforeTest" is-config="true" duration-ms="17282" started-at="2020-06-02T15:03:24Z" finished-at="2020-06-02T15:03:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="test1_HomePage()[pri:0, instance:testSuite.SanityTest@1774679]" name="test1_HomePage" duration-ms="245" started-at="2020-06-02T15:03:41Z" finished-at="2020-06-02T15:03:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1_HomePage -->
+        <test-method status="PASS" signature="test2_login()[pri:1, instance:testSuite.SanityTest@1774679]" name="test2_login" duration-ms="3904" started-at="2020-06-02T15:03:41Z" finished-at="2020-06-02T15:03:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2_login -->
+        <test-method status="PASS" signature="test3_VerifyLogin()[pri:2, instance:testSuite.SanityTest@1774679]" name="test3_VerifyLogin" duration-ms="66" started-at="2020-06-02T15:03:45Z" finished-at="2020-06-02T15:03:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3_VerifyLogin -->
+      </class> <!-- testSuite.SanityTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

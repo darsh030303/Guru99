@@ -1,4 +1,4 @@
-package test;
+package testw;
 
 import org.testng.annotations.Test;
 
@@ -68,9 +68,9 @@ public class SanityTest {
 		row=0;col=1;
 		pwd=Excel1.getCellData(row, col);
 		System.out.print(user+" "+pwd);
-		objLogin.loginToGuru99(user,pwd);
+		//objLogin.loginToGuru99(user,pwd);
 		
-	    objLogin.loginToGuru99("mngr252548", "buvEnat");
+	    objLogin.loginToGuru99("mngr263190", "reduvEz");
   }
   
   @Test(priority=2)
